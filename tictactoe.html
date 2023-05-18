@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+   
+
+.grid{
+    display:grid;
+    grid-template-columns:120px 120px 120px;
+    grid-template-rows:120px 120px 120px;
+    padding:20px;
+
+    box-shadow:1px 0px 10px 1px black;
+    border-radius:10px;
+    
+
+    
+}  
+
+#items{
+    border:3px dashed lightgray;
+    border-radius:10px;
+    background-color:lightgray;
+    padding-top:15%;
+    text-align:center;
+    align-items:center;
+    font-family:monospace;
+    margin:6%;
+    box-shadow:2px 2px black;
+    text-shadow:3px 3px grey;
+
+}
+
+#items:hover{
+    box-shadow:3px 0px 15px 3px black;
+}
+
+.cross{
+    font-size: 60px;
+    text-align: center;
+    animation:blow 200ms;
+    }
+@keyframes blow{
+    0%{font-size:0px; }
+    100%{font-size:60px; }
+}
+
+.button {
+  color: white;
+  background-color: #282934;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  line-height: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  text-align: center;
+  margin-right: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  margin-left:95px;
+  margin-top:16px;
+  box-shadow:1px 0px 10px 1px black;
+  float:left;
+}
+
+.button:hover {
+box-shadow:5px 0px 10px 1px black;
+
+}
+
+.button svg {
+  display: inline;
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-right: 0.75rem;
+  color: white;
+}
+
+.button:focus svg {
+  animation: spin_357 0.5s linear;
+  outline:none;
+}
+
+@keyframes spin_357 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.box {
+    border:0px solid black;
+  display: flex;
+  justify-content: center;
+    margin-top:5%;
+    width:50%;
+    margin-left:26%;
+}
+
+.head{
+     border:1px solid black;
+     display:flex;
+     align-items:center;
+     padding-left:2%;
+     height:60px;
+     width:95%;
+     background-color:#282934;
+     margin-top:0;
+
+}
+
+.title{
+    border:0px solid white;
+    display:flex;
+    color:white;
+
+    font-size:28px;
+    align-items:center;  
+    font-family:monospace;  
+    
+}
+.p1{
+    border:0px dashed #282934;
+    float:left;
+    margin-left:10%;
+    color:white;
+    width:46px;
+    padding: 1%;
+    border-radius: 7px;
+}
+
+.p2{
+    border:0px dashed #282934;
+    margin-left:72%;
+    color:white;
+    width: 46px;
+    padding: 1%;
+    border-radius: 7px;
+    }
+
+
+.player{
+    border:0px solid  white;
+    height:20px;
+    width:340px;
+    margin-left:7%;
+    margin-top:5%;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+
+
+.p1bx{
+    border: 1px solid white;
+    height: 20px;
+    width: 2px;
+    float: left;
+}
+
+</style>
+
+<body style="background-color:gray; background-image:url('bg4.png');">
+
+<div class="head">
+<div class="title">TIC-TAC-TOE.XO</div>
+</div>
+<div class="box">
+<div class="grid">
+    <div id="items" class="one"></div>
+    <div id="items" class="two"></div>
+    <div id="items" class="three"></div>
+    <div id="items" class="four"></div>
+    <div id="items" class="five"></div>
+    <div id="items" class="six"></div>
+    <div id="items" class="seven"></div>
+    <div id="items" class="eight"></div>
+    <div id="items" class="nine"></div>
+<div>
+
+<div class="player"> 
+    <div class="p1">P1:X
+        <div class="p1box">
+        </div>
+    </div>
+    <div class="p2">P2:O</div>
+<div>
+
+    <button  class="button" type="button" onclick="refresh()">
+        <svg viewBox="0 0 16 16" class="bi bi-arrow-repeat" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"></path>
+        <path d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" fill-rule="evenodd"></path>
+      </svg>
+          Restart
+      </button>
+         
+      
+<div>      
+      
+
+
+<div id="display"></div>
+<div id="win"></div>
+
+
+
+
+
+
+
+<script>
+
+//var winbox=[];
+//winbox=JSON.stringify(winbox);
+ //console.log(` reset winbox ${winbox}`);
+ //console.log(`reset winbox ${JSON.stringify(winbox)}`);
+
+ let onevalid=true;
+let twovalid=true;
+let threevalid=true;
+let fourvalid=true;
+let fivevalid=true;
+let sixvalid=true;
+let sevenvalid=true;
+let eightvalid=true;
+let ninevalid=true;
+
+
+
+
+
+let p1=document.querySelector(".p1");
+let p2=document.querySelector(".p2");
+let current="X";
+var b
+b=onevalid && twovalid & threevalid && fourvalid && fivevalid && sixvalid && sevenvalid && eightvalid && ninevalid ;
+console.log(b);
+var player={"X":'p1',"O":'p2'};
+
+p1.addEventListener("click",function(){
+    b=onevalid && twovalid & threevalid && fourvalid && fivevalid && sixvalid && sevenvalid && eightvalid && ninevalid ;
+    console.log(onevalid);
+    console.log("b"+b);
+
+   if(b){
+    p2.innerHTML=`P2:${current}`;
+    player[current]='p2'
+    p1.innerHTML=`P1:${(current=="X")?"O":"X"}`;
+    player[(current=="X")?"O":"X"]='p1';
+    current=(current=="O" )?"X":"O";
+    console.log(player);
+   };
+});
+
+
+p2.addEventListener("click",function(){
+    // console.log(1);
+    b==onevalid && twovalid & threevalid && fourvalid && fivevalid && sixvalid && sevenvalid && eightvalid && ninevalid ;
+   if(b){ 
+    player[current]='p2';
+    p2.innerHTML=`P2:${current}`;
+    p1.innerHTML=`P1:${(current=="X")?"O":"X"}`;
+    player[(current=="X")?"O":"X"]='p1';
+    current=(current=="O" )?"X":"O";
+   };
+});
+
+
+
+var one=document.querySelector(".one");
+var two=document.querySelector(".two");
+var three=document.querySelector(".three");
+var four=document.querySelector(".four");
+var five=document.querySelector(".five");
+var six=document.querySelector(".six");
+var seven=document.querySelector(".seven");
+var eight=document.querySelector(".eight");
+var nine=document.querySelector(".nine");
+
+
+
+
+const win=[
+    [1,5,9],
+    [3,5,7],
+    [1,4,7],
+    [2,5,8],
+    [3,6,9],
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+
+let userx=[];
+let usero=[];
+const index={1:one,2:two,3:three,4:four,5:five,6:six,7:seven,8:eight,9:nine};
+const listuser={"X":userx,"O":usero};
+let notwin=true;
+
+
+one.addEventListener("click",function(){
+    if(onevalid && notwin){
+    one.classList.add("cross");
+   
+    one.innerHTML=current;
+    if(current=="X"){
+        userx.push(1);   
+    }
+    else{
+        usero.push(1);   
+    };
+    
+    check(current,listuser[current]);
+    current=(current=="O" )?"X":"O";
+    };
+    onevalid=false;
+   console.log(onevalid)
+
+});
+
+
+two.addEventListener("click",function(){
+
+    if(twovalid && notwin){
+
+    two.classList.add("cross");
+    
+    two.innerHTML=current;
+    if(current=="X"){
+        userx.push(2);
+    }
+    else{
+        usero.push(2);
+    };
+    check(current,listuser[current]);
+    current=(current=="O")?"X":"O";
+};
+
+twovalid=false;
+//console.log(current);
+
+    
+});
+
+three.addEventListener("click",function(){
+    if(threevalid && notwin){
+    three.classList.add("cross");
+    //console.log(winbox);
+    
+    three.innerHTML=current;
+        if(current=="X"){
+        userx.push(3);
+        
+    }
+    else{
+        usero.push(3);
+    };
+    check(current,listuser[current]);
+    current=(current=="O")?"X":"O";
+    console.log(winbox);
+   // document.getElementById("win").innerHTML=notwin;
+};
+    threevalid=false;
+    //console.log(current);
+
+});
+
+four.addEventListener("click",function(){
+    if(fourvalid && notwin){
+    four.classList.add("cross");
+   
+    four.innerHTML=current;
+
+    if(current=="X"){
+        userx.push(4);
+    }
+    else{
+        usero.push(4);
+    };
+    check(current,listuser[current]);
+    current=(current=="O")?"X":"O";
+
+};
+    fourvalid=false;
+   // console.log(current);
+
+});
+
+five.addEventListener("click",function(){
+    if(fivevalid && notwin){
+    five.classList.add("cross");
+   
+    five.innerHTML=current;
+    
+    if(current=="X"){
+        userx.push(5);
+    }
+    else{
+        usero.push(5);
+    };
+    check(current,listuser[current]);
+    current=(current=="O")?"X":"O";
+    console.log(winbox);
+
+};
+    fivevalid=false;
+    //console.log(current);
+
+});
+six.addEventListener("click",function(){
+    if(sixvalid && notwin){
+    six.classList.add("cross");
+  
+    six.innerHTML=current;
+    
+    if(current=="X"){
+        userx.push(6);
+    }
+    else{
+        usero.push(6);
+    }
+    check(current,listuser[current]);
+    current=(current=="O")?"X":"O";
+    console.log(winbox);
+
+};
+    sixvalid=false;
+   // console.log(current);
+
+});
+seven.addEventListener("click",function(){
+    if(sevenvalid && notwin){
+    seven.classList.add("cross");
+    
+    seven.innerHTML=current;
+
+    if(current=="X"){
+        userx.push(7);
+    }
+    else{
+        usero.push(7);
+    }
+    check(current,listuser[current]);
+    current=(current=="O")?"X":"O";
+
+};
+    sevenvalid=false;
+    //console.log(current);
+
+});
+
+eight.addEventListener("click",function(){
+    if(eightvalid && notwin ){
+    eight.classList.add("cross");
+    
+    eight.innerHTML=current;
+    
+    if(current=="X"){
+        userx.push(8);
+    }
+    else{
+        usero.push(8);
+    }
+    check(current,listuser[current]);
+    current=(current=="O")?"X":"O";
+    console.log(winbox);
+
+};
+    eightvalid=false;
+
+});
+nine.addEventListener("click",function(){
+    if(ninevalid && notwin){
+    nine.classList.add("cross");
+    
+    nine.innerHTML=current;
+   
+    if(current=="X"){
+        userx.push(9);
+    }
+    else{
+        usero.push(9);
+    }
+    check(current,listuser[current]);
+    current=(current=="O" )?"X":"O";
+    //console.log(userx);
+    console.log(` 9th ${winbox}`);
+
+};
+    ninevalid=false;
+});
+
+//check(current,listuser[current]);
+
+
+var winbox=[];
+
+
+function check(current,list){
+    
+let z='';
+for(let i=0;i<win.length;i++){
+    let value=0;
+    let iswin=false;
+    for(let i1=0;i1<win[i].length;i1++){
+        if(list.includes(win[i][i1])){
+            value++;
+          //  console.log(value);    
+        }
+        if(value==3){
+            iswin=true;
+
+            winbox=win[i];
+            console.log(`winbox ${winbox}`);
+
+            break;
+        }
+        else{
+         //   console.log(iswin);
+            let ccc=0;
+        }
+}
+    if(iswin){
+        z="win - "+player[current];
+        if(player[current]=="p1"){
+            p1.style.color="green";
+            p2.style.color="red";
+            p1.style.background="white";
+            p2.style.background="white";
+
+
+        }
+        else{
+            p1.style.color="red";
+            p2.style.color="green";
+            p1.style.background="white";
+            p2.style.background="white";
+        };
+
+        console.log(z);
+        for(let i=0;i<winbox.length;i++){
+        
+            index[winbox[i]].style.color="white";
+            index[winbox[i]].style.background="#282934";    
+        };
+        var winbox=[];
+        console.log(`winbox 2nd ${winbox}`);
+        notwin=false;
+    
+        break;
+
+    }
+    
+
+}
+
+document.getElementById("display").innerHTML="";
+
+
+};
+
+function refresh(){
+    window.location.reload();
+};
+
+
+
+</script>    
+
+
+</body>
+</html>
