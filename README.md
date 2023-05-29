@@ -17,11 +17,11 @@ This is a simple Tic-Tac-Toe application built using HTML, CSS, and vanilla Java
 
 
 
-![HTML](https://img.shields.io/badge/HTML-5-orange) 
+- ![HTML](https://img.shields.io/badge/HTML-5-orange) 
 
-![CSS](https://img.shields.io/badge/CSS-3-blue)
+- ![CSS](https://img.shields.io/badge/CSS-3-blue)
 
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)
+- ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)
 
 
 
