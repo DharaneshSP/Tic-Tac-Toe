@@ -20,7 +20,7 @@ b=onevalid && twovalid & threevalid && fourvalid && fivevalid && sixvalid && sev
 console.log(b);
 var player={"X":'p1',"O":'p2'};
 
-p1.addEventListener("click",function(){
+p1.addEventListener("click",()=>{
     b=onevalid && twovalid & threevalid && fourvalid && fivevalid && sixvalid && sevenvalid && eightvalid && ninevalid ;
     console.log(onevalid);
     console.log("b"+b);
@@ -36,8 +36,8 @@ p1.addEventListener("click",function(){
 });
 
 
-p2.addEventListener("click",function(){
-    // console.log(1);
+p2.addEventListener("click",()=>{
+    
     b==onevalid && twovalid & threevalid && fourvalid && fivevalid && sixvalid && sevenvalid && eightvalid && ninevalid ;
    if(b){ 
     player[current]='p2';
@@ -81,7 +81,7 @@ const listuser={"X":userx,"O":usero};
 let notwin=true;
 
 
-one.addEventListener("click",function(){
+one.addEventListener("click",()=>{
     if(onevalid && notwin){
     one.classList.add("cross");
    
@@ -96,13 +96,13 @@ one.addEventListener("click",function(){
     check(current,listuser[current]);
     current=(current=="O" )?"X":"O";
     };
-  //  draw();
+  
    console.log(onevalid);
 
 });
 
 
-two.addEventListener("click",function(){
+two.addEventListener("click",()=>{
 
     if(twovalid && notwin){
 
@@ -122,7 +122,7 @@ two.addEventListener("click",function(){
 };
 
 
-//console.log(current);
+
 
     
 });
@@ -147,7 +147,7 @@ three.addEventListener("click",function(){
    
 };
     
-    //console.log(current);
+    
 
 });
 
@@ -169,8 +169,7 @@ four.addEventListener("click",function(){
    
 };
     
-   // console.log(current);
-
+   
 });
 
 five.addEventListener("click",function(){
@@ -193,8 +192,7 @@ five.addEventListener("click",function(){
 
 };
    
-    //console.log(current);
-
+ 
 });
 six.addEventListener("click",function(){
     if(sixvalid && notwin){
@@ -216,8 +214,7 @@ six.addEventListener("click",function(){
 
 };
    
-   // console.log(current);
-
+ 
 });
 seven.addEventListener("click",function(){
     if(sevenvalid && notwin){
@@ -238,8 +235,7 @@ seven.addEventListener("click",function(){
 
 };
     
-    //console.log(current);
-
+   
 });
 
 eight.addEventListener("click",function(){
@@ -282,7 +278,7 @@ nine.addEventListener("click",function(){
     check(current,listuser[current]);
     
     current=(current=="O" )?"X":"O";
-    //console.log(userx);
+    
     console.log(` 9th ${ninevalid}`);
    
 
@@ -290,15 +286,10 @@ nine.addEventListener("click",function(){
     
 });
 
-//check(current,listuser[current]);
- var c= (onevalid==false && twovalid==false && threevalid ==false && fourvalid==false &&  fivevalid ==false && sixvalid==false && sevenvalid==false && eightvalid==false && ninevalid==false );
- 
- 
 
+
+var c= (onevalid==false && twovalid==false && threevalid ==false && fourvalid==false &&  fivevalid ==false && sixvalid==false && sevenvalid==false && eightvalid==false && ninevalid==false );
 var winbox=[];
-
-
-
 
 
 function check(current,list){
@@ -309,7 +300,7 @@ for(let i=0;i<win.length;i++){
     for(let i1=0;i1<win[i].length;i1++){
         if(list.includes(win[i][i1])){
             value++;
-          //  console.log(value);    
+        
         }
 
 
@@ -345,9 +336,7 @@ for(let i=0;i<win.length;i++){
             p1.style.boxShadow="1px 0px 10px 3px green";
             p2.style.boxShadow="1px 0px 10px 3px red";
             console.log(`b= `+b);
-           // p1.style.background="lightgray";
-           // p2.style.background="lightgray";
-
+           
 
         }
        
@@ -355,8 +344,7 @@ for(let i=0;i<win.length;i++){
             p2.style.boxShadow="1px 0px 10px 3px green";
             p1.style.boxShadow="1px 0px 10px 3px red";
           
-          //  p1.style.background="white";
-           // p2.style.background="white";
+        
         };
 
         console.log(z);
@@ -376,7 +364,6 @@ for(let i=0;i<win.length;i++){
 
 }
 
-//document.getElementById("display").innerHTML="";
 
 
 };
