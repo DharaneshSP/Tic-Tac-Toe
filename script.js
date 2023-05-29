@@ -9,9 +9,6 @@ let eightvalid=true;
 let ninevalid=true;
 
 
-
-
-
 let p1=document.querySelector("#box1");
 let p2=document.querySelector("#box2");
 let current="X";
