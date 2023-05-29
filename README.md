@@ -44,7 +44,7 @@ This is a simple Tic-Tac-Toe application built using HTML, CSS, and vanilla Java
 - Player 2 (usually 'O') takes the next turn by clicking on an empty cell.
 - The starting values X or O can be changed before starting the game by clicking the values either side of the restart button.
 - Players continue taking turns until a player wins or the game ends in a draw.
-- After the game ends, players can click the "Reset" button to start a new game.
+- After the game ends, players can click the "Restart" button to start a new game.
 
 
 
