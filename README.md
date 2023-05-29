@@ -1,5 +1,5 @@
 
-# Tic-Tac-Toe Application
+# Tic-Tac-Toe  Application
 
 This is a simple Tic-Tac-Toe application built using HTML, CSS, and vanilla JavaScript. It allows two players to play the classic game of Tic-Tac-Toe on a web browser.
 
