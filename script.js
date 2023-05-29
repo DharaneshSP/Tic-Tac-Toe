@@ -348,7 +348,8 @@ for(let i=0;i<win.length;i++){
         for(let i=0;i<winbox.length;i++){
         
             index[winbox[i]].style.color="white";
-            index[winbox[i]].style.background="#282934";    
+            index[winbox[i]].style.background="#282934";  
+            index[winbox[i]].style.borderStyle="dashed";
         };
         var winbox=[];
         console.log(`winbox 2nd ${winbox}`);
