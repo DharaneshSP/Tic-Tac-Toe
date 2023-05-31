@@ -148,6 +148,7 @@ box-shadow:5px 0px 10px 1px black;
 
 .p2{
     border:5px solid transparent;
+
     margin-left:23.4%;
     color:white;
     width: 46px;
@@ -165,7 +166,7 @@ box-shadow:5px 0px 10px 1px black;
 
     }
 
-
+/* 
 footer{
         background-color:#282934;
         border: 0px solid #090C1D;
@@ -183,7 +184,7 @@ footer{
         border-radius: 10px;
         text-align: center;
         
-    }
+    } */
 
 body{
 
