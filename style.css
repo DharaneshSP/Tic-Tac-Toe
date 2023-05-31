@@ -11,9 +11,9 @@
 }  
 
 #items{
-    border:3px solid lightgray;
+    border:3px solid #D3D3D3;
     border-radius:10px;
-    background-color:lightgray;
+    background-color:#D3D3D3;
     padding-top:14%;
     text-align:center;
     align-items:center;
