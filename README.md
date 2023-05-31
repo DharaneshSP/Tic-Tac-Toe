@@ -33,11 +33,11 @@ This is a simple Tic-Tac-Toe application built using HTML, CSS, and vanilla Java
 
     - Clone the repository: `git clone https://github.com/DharaneshSP/Tic-Tac-Toe.git`
     - Open the `index.html` file in a web browser.
-   
+  /* 
 - To run the Tic-Tac-Toe application without locally,     
 
     - [Click To Run Directly](https://dharaneshsp.github.io/Tic-Tac-Toe/)
-    
+   */ 
 
 ## Usage
 
