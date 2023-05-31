@@ -126,7 +126,7 @@ box-shadow:5px 0px 10px 1px black;
     
 }
 .p1{
-    border:5px solid #282934;
+    border:5px solid transparent;
     float:left;
     margin-left:26.4%;
     color:white;
@@ -147,7 +147,7 @@ box-shadow:5px 0px 10px 1px black;
 }
 
 .p2{
-    border:5px solid #282934;
+    border:5px solid transparent;
     margin-left:23.4%;
     color:white;
     width: 46px;
