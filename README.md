@@ -37,7 +37,7 @@ This is a simple Tic-Tac-Toe application built using HTML, CSS, and vanilla Java
 - To run the Tic-Tac-Toe application without locally,     
 
     - [Click To Run Directly](https://dharaneshsp.github.io/Tic-Tac-Toe/)
-   -->
+   
 
 ## Usage
 
@@ -49,7 +49,7 @@ This is a simple Tic-Tac-Toe application built using HTML, CSS, and vanilla Java
 - After the game ends, players can click the "Restart" button to start a new game.
 
 
-
+-->
 
 
 
