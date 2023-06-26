@@ -18,7 +18,7 @@ console.log(b);
 var player={"X":'p1',"O":'p2'};
 
 p1.addEventListener("click",()=>{
-    b=onevalid && twovalid & threevalid && fourvalid && fivevalid && sixvalid && sevenvalid && eightvalid && ninevalid ;
+    b=onevalid && twovalid && threevalid && fourvalid && fivevalid && sixvalid && sevenvalid && eightvalid && ninevalid ;
     console.log(onevalid);
     console.log("b"+b);
 
