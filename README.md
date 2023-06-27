@@ -2,7 +2,7 @@
 
 <h1 align="center" >Tic-Tac-Toe</h1>
 
-<div align="center">
+<div align="justify">
 This is a simple Tic-Tac-Toe application built using HTML, CSS, and vanilla JavaScript. It allows two players to play the classic game of Tic-Tac-Toe on a web browser.
 </div>
 
