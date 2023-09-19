@@ -16,7 +16,7 @@ This is a simple Tic-Tac-Toe application built using HTML, CSS, and vanilla Java
 - Colored Game Results : The Results are displayed as the color of green for win , red for lose , yellow for draw by displaying in the borders of value boxes which is surrounded around restart button.
 
 
-## Technologies Used
+## Tech Stack
 
 
 
